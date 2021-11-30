@@ -15,19 +15,20 @@ import re
 
 
 def multiply_numbers(inputs):
+
     not_a_symbols = r'\D'
-    str_mult = re.sub(not_a_symbols, '', inputs)
-    if not str_mult:
+    inputs = re.sub(not_a_symbols, '', str(inputs))
+    if not inputs:
         return None
     s = 1
-    for i in str_mult:
+    for i in inputs:
         s *= int(i)
-    print(inputs)
+
     return s
 
 
 if __name__ == '__main__':
     try:
-        print(multiply_numbers('ss2255s'))
+        print(multiply_numbers([5, 6, 4]))
     except TypeError:
         print(None)
