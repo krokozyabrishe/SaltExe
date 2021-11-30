@@ -17,7 +17,10 @@ rps_game_winner([['player1', 'P'], ['player2', 'A']]) #
 => NoSuchStrategyError
 rps_game_winner([['player1', 'P'], ['player2', 'S']]) #
 => 'player2 S'
-rps_game_winner([['player1', 'P'], ['player2', 'P']]) #'''
+rps_game_winner([['player1', 'P'], ['player2', 'P']]) #
+=>'player1 P'
+'''
+
 
 class Error(Exception):
     pass
@@ -36,8 +39,9 @@ def check(a, b):
         if a not in tr or b not in tr:
             raise NoSuchStrategyError
 
-        if a == b:
-            return 'player1 ' + a
+        for i, j in tr.items():
+            if a == b:
+                return 'player1 ' + a
             if a == i and b == j:
                 return ("player1 " + a)
             elif b == i and a == j:
@@ -55,4 +59,4 @@ def rps_game_winner(stats):
         return("WrongNumberOfPlayersError")
 
 if __name__ == '__main__':
-    print(rps_game_winner([['player1', 'P'], ['player2', 'P']]))
+    print(rps_game_winner([['player1', 'P'], ['player2', 'S'], ['player3', 'S']]))
