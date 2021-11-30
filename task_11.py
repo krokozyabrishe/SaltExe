@@ -8,7 +8,6 @@
 
 
 class Dessert:
-
     def __init__(self, name="dessert", calories=None):
         self.name = name
         self.calories = calories
@@ -26,10 +25,13 @@ class Dessert:
         return self.calories
 
     def is_healthy(self):
-        if self.calories < 200:
-            return True
+        if self.calories:
+            if self.calories < 200:
+                return True
+        return False
 
     def is_delicious(self):
         return True
+
 
 
