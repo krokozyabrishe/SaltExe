@@ -15,10 +15,14 @@ import re
 
 def is_palindrome(a):
     not_a_symbols = r'\W'  # \W - Не буквенные символы, \w -исключительно буквенные
-    s = re.sub(not_a_symbols, '', a.lower())
-    return list(s) == list(reversed(s))
+    if a:
+        s = re.sub(not_a_symbols, '', str(a).lower())
+        return list(s) == list(reversed(s))
+    else:
+        return False
+
 
 
 if __name__ == '__main__':
-    data = input()
-    print(is_palindrome(data))
+    #data = input()
+    print(is_palindrome("2A man, a plan, a1 c1anal -- Panama2"))
