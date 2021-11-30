@@ -50,10 +50,4 @@ class JellyBean(Dessert):
         def getFlavor(self):
             return self._flavor
 
-if __name__ == '__main__':
 
-
-        B = JellyBean("Dessert", 199, "back licorice")
-
-        print(B.is_delicious())
-        print((B.is_healthy()))
