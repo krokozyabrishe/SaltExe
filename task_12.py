@@ -5,32 +5,7 @@
 false только в тех случаях, когда flavor равняется «black licorice».
 """
 
-
-class Dessert:
-
-    def __init__(self, name="dessert", calories=None):
-        self._name = name
-        self._calories = calories
-
-    def setName(self, name):
-        self._name = name
-
-    def setCalories(self, calories):
-        self._calories = calories
-
-    def getName(self):
-        return self._name
-
-    def getCalories(self):
-        return self._calories
-
-    def is_healthy(self):
-        if self._calories < 200:
-            return True
-        else: return False
-
-    def is_delicious(self):
-        return True
+from task_11 import Dessert
 
 
 class JellyBean(Dessert):
@@ -49,5 +24,6 @@ class JellyBean(Dessert):
 
         def getFlavor(self):
             return self._flavor
+
 
 
