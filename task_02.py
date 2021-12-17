@@ -16,7 +16,7 @@ def coincidence(data, rang):
     rang = list(rang)
     for i in data:
         try:
-            if rang[0] <= i <= rang[-1]:
+            if rang[0] <=  float(i) <= rang[-1]:
                 res.append(i)
         except:
             continue
@@ -25,7 +25,7 @@ def coincidence(data, rang):
 if __name__ == '__main__':
 
     try:
-        print(coincidence([None, 1, 'foo', 4, 2, 2.5], range(1,4)))
+        print(coincidence([None, "1", 'foo', "3", 2, 2.5555], range(1, 4)))
     except:
         print([])
 
